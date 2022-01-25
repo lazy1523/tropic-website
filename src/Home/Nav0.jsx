@@ -62,7 +62,7 @@ class Header extends React.Component {
         );
       }
       return (
-        <Item key={item.name} {...itemProps}>
+        <Item disabled key={item.name} {...itemProps}>
           <a {...a} className={`header0-item-block ${a.className}`.trim()}>
             {a.children.map(getChildrenToRender)}
           </a>

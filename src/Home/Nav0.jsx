@@ -2,10 +2,10 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
 import { getChildrenToRender } from './utils';
-
+const logo_heder= require('./img/dlogo.png');
 const { Item, SubMenu } = Menu;
 
-class Header3 extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,12 +34,12 @@ class Header3 extends React.Component {
             title={
               <div
                 {...a}
-                className={`header3-item-block ${a.className}`.trim()}
+                className={`header0-item-block ${a.className}`.trim()}
               >
                 {a.children.map(getChildrenToRender)}
               </div>
             }
-            popupClassName="header3-item-child"
+            popupClassName="header0-item-child"
           >
             {subItem.map(($item, ii) => {
               const { children: childItem } = $item;
@@ -63,7 +63,7 @@ class Header3 extends React.Component {
       }
       return (
         <Item key={item.name} {...itemProps}>
-          <a {...a} className={`header3-item-block ${a.className}`.trim()}>
+          <a {...a} className={`header0-item-block ${a.className}`.trim()}>
             {a.children.map(getChildrenToRender)}
           </a>
         </Item>
@@ -85,7 +85,7 @@ class Header3 extends React.Component {
             animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
             {...dataSource.logo}
           >
-            <img width="100%" src={dataSource.logo.children} alt="img" />
+            <img width={66} height={66} src={logo_heder} alt="img" />
           </TweenOne>
           {isMobile && (
             <div
@@ -104,7 +104,6 @@ class Header3 extends React.Component {
             animation={
               isMobile
                 ? {
-                    x: 0,
                     height: 0,
                     duration: 300,
                     onComplete: (e) => {
@@ -120,9 +119,10 @@ class Header3 extends React.Component {
             reverse={!!phoneOpen}
           >
             <Menu
+            style={{width:500}}
               mode={isMobile ? 'inline' : 'horizontal'}
-              defaultSelectedKeys={['sub0']}
-              theme="light"
+
+              theme="dark"
             >
               {navChildren}
             </Menu>
@@ -133,4 +133,4 @@ class Header3 extends React.Component {
   }
 }
 
-export default Header3;
+export default Header;

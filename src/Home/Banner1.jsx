@@ -1,3 +1,4 @@
+import 'rc-banner-anim/assets/index.css';
 import React from 'react';
 import { Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
@@ -5,7 +6,8 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import BannerAnim, { Element } from 'rc-banner-anim';
 import { isImg } from './utils';
-import 'rc-banner-anim/assets/index.css';
+const d_91= require('./img/d91.png');
+
 
 const { BgElement } = Element;
 class Banner extends React.PureComponent {
@@ -31,12 +33,12 @@ class Banner extends React.PureComponent {
             <div key="logo" {...title}>
               {typeof title.children === 'string' &&
               title.children.match(isImg) ? (
-                <img src={title.children} width="100%" alt="img" />
+                <img src={d_91} width="100%" alt="img" />
               ) : (
                 title.children
               )}
             </div>
-            <div key="content" {...content}>
+            <div style={{color:"#FFFFF"}} key="content" {...content}>
               {content.children}
             </div>
             <Button ghost key="button" {...button}>

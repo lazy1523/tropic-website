@@ -14,7 +14,7 @@ export const Nav00DataSource = {
         name: 'item0',
         className: 'header0-item',
         children: {
-          href: 'https://tropswap-er0yfjuv-lazy1523.4everland.app/',
+          href: 'https://tropswap-er0yfjuv-lazy1523.4everland.app',
           children: [
             {
               children: (

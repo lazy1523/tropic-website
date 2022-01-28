@@ -48,7 +48,7 @@ export const Nav00DataSource = {
         name: 'item2',
         className: 'header0-item',
         children: {
-          href: 'https://gift.tropiclabs.xyz',
+          href: 'https://trop-giftnft.4everland.app/',
           children: [
             {
               children: (

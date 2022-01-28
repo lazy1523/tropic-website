@@ -31,7 +31,7 @@ export const Nav00DataSource = {
         name: 'item1',
         className: 'header0-item',
         children: {
-          href: 'https://game.tropiclabs.xyz',
+          href: '',
           children: [
             {
               children: (
@@ -70,7 +70,7 @@ export const Nav00DataSource = {
         name: 'item3',
         className: 'header0-item',
         children: {
-          href: 'https://tropyes.tropiclabs.xyz',
+          href: '',
           children: [
             {
               children: (
